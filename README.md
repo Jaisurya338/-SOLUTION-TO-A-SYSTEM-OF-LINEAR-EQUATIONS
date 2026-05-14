@@ -14,8 +14,27 @@ Using the np.linalg.solve(), we can find the solutions.
 ### Step 4: 
 End the program
 ## Program:
+import os
+os.environ["OPENBLAS_NUM_THREADS"]="1"
+import numpy as np
+# Coefficient matrix
+A = np.array([[1, 3],
+              [2, 5]])
+
+# Constant matrix
+B = np.array([5, -3])
+
+# Solving the equations
+solution = np.linalg.solve(A, B)
+
+# Display result
+x, y = solution
+c = np.array([x,y])
+print(c)
 
 ## Output:
+<img width="989" height="828" alt="image" src="https://github.com/user-attachments/assets/47dd349e-d720-4f71-b8eb-ab2817e35299" />
+
 ## Result: 
 Thus the solutions for the linear equations are successfully solved using python program
 
